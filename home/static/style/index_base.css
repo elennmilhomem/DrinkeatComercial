@@ -1,0 +1,12 @@
+#fundobar_top {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+#fundobar_bottom {
+
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
