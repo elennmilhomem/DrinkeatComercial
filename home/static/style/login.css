@@ -4,9 +4,9 @@
     /* Referente ao elemento central de login, bem como textos principais */
     width: 320px;
     height: 420px;
-    border: 2px solid #ff8c00;
+    border: 2px solid #fd7e14;
     border-radius: 80px 0px 80px 0px;
-    color: #ff8c00;
+    color: #fed136;
     background-color: rgba(0, 0, 5, 0.8);
     top: 50%;
     left: 50%;
@@ -48,7 +48,7 @@ h1 {
 .login input[type="text"],
 input[type="password"] {
     border: none;
-    border-bottom: 1px solid #ff8c00;
+    border-bottom: 1px solid #fd7e14;
     background: transparent;
     outline: none;
     height: 40px;
@@ -60,12 +60,12 @@ input[type="password"] {
 .login input[type="submit"] {
     /* Botão Entrar */
     font-family: 'Turret Road', cursive;
-    border: 2px solid #ff8c00;
+    /* border: 2px solid #fd7e14; */
     height: 35px;
-    color: #000;
+    /* color: #000; */
     font-weight: bold;
     font-size: 14px;
-    transition: .3s;
+    /* transition: .3s; */
     /* background: #fff; */
     border-radius: 20px;
     /*
@@ -76,12 +76,12 @@ input[type="password"] {
  .login input[type="submit"]:hover { 
     /* cursor: pointer; */
     color: #fff;
-    background: #ff8c00;
+    background: #fd7e14;
     font-weight: bold;
     font-size: 16px;
     box-shadow: 0 3px 25px #000;
-    border: #ff8c00;
-    border-bottom: 4px solid #ffc93b;
+    border: #fd7e14;
+    border-bottom: 4px solid #fed136;
     /* transition: 0.2s; */
 } 
 
@@ -91,7 +91,7 @@ input[type="password"] {
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
-    color: #ff8c00;
+    color: #fed136;
     transition: 0.2s;
 
 }

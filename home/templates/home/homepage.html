@@ -1,9 +1,11 @@
 {% extends "index_base.html" %} {% block body %}
 {% load static %}
 
+<link rel="stylesheet" href="{% static 'style/homepage.css' %}">
+
 <main role="main" style="background-color: #f2f2f2;">
-  <div class="jumbotron jumbotron-fluid" style="background-color: #FF8C00;">
-    <div class="container">
+  <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+    <div class="container caixa-descricao-drinkeat">
       <h1 class="display-4">Hello, world!</h1>
       <p class="lead">This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
         and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
@@ -12,7 +14,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <img src="{% static 'images/bar.png' %}" style="width: 120px;">
+        <img src="{% static 'images/bar.png' %}" style="width: 150px;">
         <h2>Bares</h2>
         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
           nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
