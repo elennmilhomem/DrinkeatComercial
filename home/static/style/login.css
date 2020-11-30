@@ -1,6 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@300&display=swap');
+.cadastro background-image {
+    filter: blur(3px);
+}
 
 .login {
+    /* Referente ao elemento central de login, bem como textos principais */
+    width: 320px;
+    height: 420px;
+    border: 2px solid #fd7e14;
+    border-radius: 80px 0px 80px 0px;
+    color: #fed136;
+    background-color: rgba(0, 0, 5, 0.8);
+    /* top: 15px;
+    left: 50%;
+    position: static; */
+    /* transform: translate(-50%, 0%); */
+    box-sizing: border-box;
+    padding: 50px 28px 68px 28px; 
+}
+
+.cadastro {
     /* Referente ao elemento central de login, bem como textos principais */
     width: 320px;
     height: 420px;
@@ -14,6 +32,7 @@
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 68px 28px;
+    ;
 }
 
 .usuario {
@@ -34,7 +53,24 @@ h1 {
     font-size: 25px;
 }
 
+.cadastro h1{
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px; 
+}
+
 .login p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.cadastro p {
     margin: 0;
     padding: 0;
     font-weight: bold;
@@ -45,6 +81,11 @@ h1 {
     margin-bottom: 21px;
 }
 
+.cadastro input {
+    width: 100%;
+    margin-bottom: 21px; 
+}
+
 .login input[type="text"],
 input[type="password"] {
     border: none;
@@ -52,29 +93,35 @@ input[type="password"] {
     background: transparent;
     outline: none;
     height: 40px;
-    color: white;
-    font-family: 'Turret Road', cursive;
     font-size: 16px;
 }
 
-.login input[type="submit"] {
-    /* Botão Entrar */
-    font-family: 'Turret Road', cursive;
-    /* border: 2px solid #fd7e14; */
-    height: 35px;
-    /* color: #000; */
-    font-weight: bold;
-    font-size: 14px;
-    /* transition: .3s; */
-    /* background: #fff; */
-    border-radius: 20px;
-    /*
+.cadastro input[type="text"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fd7e14; /* espessura e cor das linhas de campo de preenchimento de dados */
+    background: transparent;
     outline: none;
-     */
+    height: 40px;
+    font-size: 16px;
 }
 
- .login input[type="submit"]:hover { 
-    /* cursor: pointer; */
+
+.login input[type="submit"] {
+    /* Botão Entrar */
+    border: 2px solid #fd7e14;
+    height: 35px;
+    color: #000; /* cor do texto do botão */
+    font-weight: bold;
+    font-size: 14px;
+    transition: .3s;
+    background: #fff;
+    border-radius: 20px;
+    outline: none;
+}
+
+.login input[type="submit"]:hover {
+    cursor: pointer;
     color: #fff;
     background: #fd7e14;
     font-weight: bold;
@@ -82,8 +129,21 @@ input[type="password"] {
     box-shadow: 0 3px 25px #000;
     border: #fd7e14;
     border-bottom: 4px solid #fed136;
-    /* transition: 0.2s; */
-} 
+    transition: 0.2s;
+}
+
+.cadastro input[type="submit"]:hover {
+    cursor: pointer;
+    color: #fff;
+    background: #fd7e14;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 3px 25px #000;
+    border: #fd7e14;
+    border-bottom: 4px solid #fed136;
+    transition: 0.2s;
+}
+
 
 .login a {
     /* Campos de esqueceu senha e fazer conta */
@@ -96,7 +156,12 @@ input[type="password"] {
 
 }
 
-/* .login a:hover { 
+.cadastro a {
+    /* Campos de esqueceu senha e fazer conta */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fed136;
     transition: 0.2s;
-    color: #ff8c00;
-} */
+}

@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Logado</h1>
+    <form action="{% url 'deslogar_user' %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Sair">
+    </form>
 </body>
 </html>

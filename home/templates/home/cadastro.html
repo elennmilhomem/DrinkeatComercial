@@ -1,0 +1,58 @@
+{% extends "index_base.html" %} {% block body %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style/login.css' %}">
+
+<style>
+    body {
+        height: 300px;
+        margin: 0;
+        padding: 0;
+        background-image:url("{% static 'images/fundobar_background.png' %}");
+        background-size: auto;
+    }
+</style>
+<div class="cadastro">
+    <img src="{% static 'images/user.png' %}" class="usuario" width="100" height="100" alt="foto de usuário">
+    <h1>Cadastro</h1>
+    <form method="POST" class="form-registro" id="form-registro">
+        <div class="form-row">
+            <div class="form-group">
+                <div class="form-input">
+                    <p>Nome</p>
+                    <input type="text" name="first-name" id="first-name" placeholder="Insira seu primeiro nome" />
+                </div>
+                <div class="form-input">
+                    <p>Sobrenome</p>
+                    <input type="text" name="last_name" id="last_name" placeholder="Insira seu segundo nome" />
+                </div>
+                <div class="form-input">
+                    <p>E-mail</p>
+                    <input type="text" name="email" id="email" placeholder="Insira seu endereço de e-mail" />
+                </div>
+                <div class="form-input">
+                    <p>Telefone</p>
+                    <input type="text" name="phone_number" id="phone_number"
+                        placeholder="Insira seu número de telefone" />
+                </div>
+            </div>
+        </div>
+        <div class="form-submit">
+            <table>
+                <tr>
+                    <td>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="submit" type="submit" value="Submit"
+                            name="submit">Enviar</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="reset" type="submit" value="Reset"
+                            name="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <a href="#">Já possui uma conta? Logar!</a>
+    </form>
+</div>
+
+{% endblock %}
