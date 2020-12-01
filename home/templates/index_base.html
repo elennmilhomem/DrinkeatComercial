@@ -31,7 +31,8 @@
 <body id="topo">
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container" id="logo">
-      <a class="navbar-brand js-scroll-trigger" href="#topo"><img src="{% static 'images/logo_site.png' %}" width="150px" height="150px" alt="logo do site"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#topo"><img src="{% static 'images/logo_site.png' %}"
+          width="150px" height="150px" alt="logo do site"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -48,17 +49,24 @@
       </div>
     </div>
   </nav>
-  {% block body %}
-  {% endblock %}
+
+
+  <div class="wrapper">
+    {% block body %}
+    {% endblock %}
+  </div>
 
   <footer class="footer py-4">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-4 text-lg-left">© Drinkeat 2020</div>
         <div class="col-lg-4 my-3 my-lg-0">
-          <a class="btn btn-dark btn-social mx-2" href="#!"> <img src="{% static 'images/twitter.png' %}" alt=""><i class="fab fa-instagram-in"></i></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"><img src="{% static 'images/facebook.png' %}" alt=""><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"><img src="{% static 'images/linkedin.png' %}" alt=""><i class="fab fa-linkedin-li"></i></a>
+          <a class="btn btn-dark btn-social mx-2" href="#!"> <img src="{% static 'images/twitter.png' %}" alt=""><i
+              class="fab fa-instagram-in"></i></a>
+          <a class="btn btn-dark btn-social mx-2" href="#!"><img src="{% static 'images/facebook.png' %}" alt=""><i
+              class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-dark btn-social mx-2" href="#!"><img src="{% static 'images/linkedin.png' %}" alt=""><i
+              class="fab fa-linkedin-li"></i></a>
         </div>
         <div class="col-lg-4 text-lg-right">
           <a class="mr-3" href="#!">Política de Privacidade</a>

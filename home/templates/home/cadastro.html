@@ -3,16 +3,17 @@
 
 <link rel="stylesheet" href="{% static 'style/login.css' %}">
 
+
 <style>
     body {
-        height: 300px;
+        height: 120%;
         margin: 0;
         padding: 0;
         background-image:url("{% static 'images/fundobar_background.png' %}");
         background-size: auto;
     }
 </style>
-<div class="cadastro">
+<div class="cadastro centered">
     <img src="{% static 'images/user.png' %}" class="usuario" width="100" height="100" alt="foto de usuário">
     <h1>Cadastro</h1>
     <form method="POST" class="form-registro" id="form-registro">
@@ -41,12 +42,8 @@
             <table>
                 <tr>
                     <td>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="submit" type="submit" value="Submit"
+                        <button class="btn btn-primary btn-md text-uppercase" id="submit" type="submit" value="Submit"
                             name="submit">Enviar</button>
-                    </td>
-                    <td>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="reset" type="submit" value="Reset"
-                            name="reset">Reset</button>
                     </td>
                 </tr>
             </table>
