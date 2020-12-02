@@ -1,3 +1,6 @@
+/* .container feed {
+    padding-top: 120px;
+} */
 
 body h6 {
     color: #fed136;
@@ -35,6 +38,7 @@ body h6 {
 .profile-feed-item {
     padding: 1.5rem 0;
     border-bottom: 1px solid #e9e9e9;
+    /* miolo do feed */
 }
 
 .img-sm {
@@ -43,8 +47,8 @@ body h6 {
 }
 
 .img-md {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 140px;
     position: relative;
 }
 
