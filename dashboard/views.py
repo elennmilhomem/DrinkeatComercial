@@ -9,6 +9,6 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 @login_required(login_url='/login')
 def dashboard_index(request):
-    template = loader.get_template('dashboard/dashboard_index.html')
+    template = loader.get_template('dashboard/dashboard_feed.html')
     context = {}
     return HttpResponse(template.render(context, request))

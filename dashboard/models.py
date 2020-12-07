@@ -1,8 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Usuario(models.Model): 
-    primeiro_nome = models.CharField(max_length=30)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    primeiro_nome = models.CharField(max_length=30, default=None)
     ultimo_nome = models.CharField(max_length=30)
     cidade = models.CharField(max_length=30)
     descricao_usuario = models.CharField (max_length=120)

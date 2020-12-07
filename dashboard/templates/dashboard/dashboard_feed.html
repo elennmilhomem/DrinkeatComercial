@@ -1,4 +1,4 @@
-{% extends "index_base.html" %} {% block body %}
+{% extends "index_base_dashboard.html" %} {% block body %}
 {% load static %}
 
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.7.95/css/materialdesignicons.min.css">
@@ -150,6 +150,13 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- form post feed -->
+
+                            <form action="POST">
+                                <button type="submit">Postar</button>
+                            </form>
+
+                            <!-- lista de feed -->
                             <div class="profile-feed">
                                 <div class="d-flex align-items-start profile-feed-item">
                                     <img src="{% static 'images/avatar2.jpg' %}" alt="profile"
