@@ -32,10 +32,10 @@ class Categoria(models.Model):
     estabelecimento = models.ManyToManyField(Estabelecimento)
 
 class Post(models.Model):
-    data = models.DateField()
-    imagem = models.ImageField()
-    comentario = models.CharField(max_length=240)      
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)    
+    data = models.DateField(null=True)
+    imagem = models.ImageField(upload_to='images/',blank=True, null=True)
+    comentario = models.CharField(max_length=240, null=True)      
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=True)    
 
 class Desconto(models.Model):
     nome = models.CharField(max_length=30)
