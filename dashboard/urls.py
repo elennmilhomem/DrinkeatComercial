@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from django.conf import settings 
 
 
-urlpatterns = [path("", views.FeedView.as_view(), name="dashboard_feed")]
+urlpatterns = [path("", views.post_post, name="dashboard_feed")]
 
 
 if settings.DEBUG:
