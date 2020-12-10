@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 
 class Usuario(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    primeiro_nome = models.CharField(max_length=30, default=None)
-    ultimo_nome = models.CharField(max_length=30)
+    instagram = models.CharField(max_length=30, default=None)
+    twitter = models.CharField(max_length=30)
     cidade = models.CharField(max_length=30)
     descricao_usuario = models.CharField(max_length=120)
     pontuacao = models.IntegerField()
@@ -32,7 +32,7 @@ class Avaliacao(models.Model):
 class Categoria(models.Model):
     nome_categoria = models.CharField(max_length=30)
     nome_descricao = models.CharField(max_length=30)
-    usuario = models.ManyToManyField(Usuario)
+    user = models.ManyToManyField(User)
     estabelecimento = models.ManyToManyField(Estabelecimento)
 
 

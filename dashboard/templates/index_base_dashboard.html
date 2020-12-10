@@ -33,7 +33,7 @@
 <link rel="shortcut icon" type="image/x-icon" sizes="144x144" href="{% static 'images/favicon.ico' %}">
 
 <body id="topo">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
     <div class="container" id="logo">
       <a class="navbar-brand js-scroll-trigger" href="#topo"><img src="{% static 'images/logo_site.png' %}"
           width="150px" height="150px" alt="logo do site"></a>
@@ -74,10 +74,10 @@
                   <img src="{% static 'images/avatar1.png' %}" alt="imagem de perfil"
                     class="img-md rounded-circle mb-3">
                   <div class="mb-3">
-                    Jade Sousa
+                    {{usuario.user.username}}
                     <i class="mdi mdi-circle"></i>
                     <div class="d-flex align-items-center justify-content-center">
-                      Palmas
+                      {{usuario.cidade}}
                       <!-- <i class="mdi mdi-city"></i> -->
                       <div class="br-wrapper br-theme-css-stars"><select id="profile-rating" name="rating"
                           autocomplete="off" style="display: none;">
@@ -95,9 +95,7 @@
                       </div>
                     </div>
                   </div>
-                  <p class="w-90 mx-auto mb-4">Apaixonada por comida japonesa, sem deixar de lado minha
-                    paixão pelo maravilhoso tempero brasileiro, tenho como hobby ler livros em
-                    cafeterias enquanto aprecio um bom café. </p>
+                  <p class="w-90 mx-auto mb-4">{{usuario.descricao_usuario}}</p>
                   <div class="d-flex justify-content-center">
                     <!-- <button class="btn btn-success mr-1">Hire Me</button> -->
                     <!-- <button class="btn btn-success">Editar Perfil</button> -->
@@ -106,13 +104,10 @@
                 <div class="border-bottom py-4">
                   Interesses
                   <i class="mdi mdi-food-fork-drink"></i>
-
                   <div>
-                    <label class="badge badge-outline-dark">Sushi</label>
-                    <label class="badge badge-outline-dark">Cappuccino</label>
-                    <label class="badge badge-outline-dark">Feijoada</label>
-                    <label class="badge badge-outline-dark">chopp</label>
-                    <label class="badge badge-outline-dark">Vinho</label>
+                    {% for categoria in categorias %}
+                    <label class="badge badge-outline-dark">{{categoria.nome_categoria}}</label>
+                    {% endfor %}
                   </div>
                 </div>
                 <div class="border-bottom py-4">
@@ -132,24 +127,16 @@
                 <div class="py-4">
                   <p class="clearfix">
                     <span class="float-left">
-                      Celular
-                    </span>
-                    <span class="float-right text-muted">
-                      063 3435 22
-                    </span>
-                  </p>
-                  <p class="clearfix">
-                    <span class="float-left">
                       E-mail
                     </span>
                     <span class="float-right text-muted">
-                      jade_s@gmail.com
+                      {{usuario.user.email}}
                       <p class="clearfix">
                         <span class="float-left">
                           Instagram
                         </span>
                         <span class="float-right text-muted">
-                          <a href="#">@jadeeeSousa</a>
+                          <a href="#">{{usuario.instagram}}</a>
                         </span>
                       </p>
                       <p class="clearfix">
@@ -157,7 +144,7 @@
                           Twitter
                         </span>
                         <span class="float-right text-muted">
-                          <a href="#">@cafecomlivro</a>
+                          <a href="#">{{usuario.twitter}}</a>
                         </span>
                       </p>
                 </div>
