@@ -149,6 +149,7 @@
                         </span>
                       </p>
                 </div>
+                <a href="{% url 'update_usuario' usuario.id %}" class="btn btn-primary btn-block mb-2" >Editar Perfil</a>
                 <form action="{% url 'deslogar_user' %}" method="post">
                   {% csrf_token %}
                   <!-- <a class="nav-link" type="submit">Sair</a> -->

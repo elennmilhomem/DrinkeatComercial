@@ -9,8 +9,15 @@ from datetime import datetime
 from django.views.generic.base import View
 from .models import Post, Usuario, Categoria
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import FormView
+from django.views.generic.edit import FormView, UpdateView
 
+
+class UsuarioUpdateView(UpdateView, LoginRequiredMixin):
+    form_class = UsuarioForm
+    template_name = 'dashboard/dashboard_usuario_create.html'
+    success_url = '/dash'
+    model = Usuario 
+    # fields = ['instagram', 'twitter', 'cidade', 'descricao_usuario', 'foto_perfil']
 
 class UsuarioFormView(FormView, LoginRequiredMixin):
     form_class = UsuarioForm
