@@ -4,22 +4,21 @@ from datetime import datetime
 
 class PostForm(forms.ModelForm):
     
-    comentario = forms.CharField(max_length=240, label="Escreva um comentário")
+    comentario = forms.CharField(max_length=240, label="Escreva um comentário:")
     imagem = forms.ImageField(label="Imagem:", allow_empty_file=True)
 
     class Meta: 
         model = Post
         fields = ['comentario', 'imagem',]
     
-    # def save(self,request):
-    #     # print("oi")
-    #     # print(request.FILES['imagem'].name)
-    #     post = Post.objects.create(
-    #         comentario = self.cleaned_data['comentario'],
-    #         imagem = self.cleaned_data['imagem'],
-    #         user = request.user,
-    #         data = datetime.now()
-    #     )
-    #     return post
+class UsuarioForm(forms.ModelForm):
 
+    instagram = forms.CharField(max_length=30, label="Instagram:")
+    twitter = forms.CharField(max_length=30, label="Twitter:")
+    cidade = forms.CharField(max_length=30, label="Cidade:")
+    descricao_usuario = forms.CharField(max_length=120, label="Sobre mim:")
+    foto_perfil = forms.ImageField(label="Foto de usuário")
     
+    class Meta:
+        model = Usuario
+        fields = ['instagram', 'twitter', 'cidade', 'descricao_usuario', 'foto_perfil']

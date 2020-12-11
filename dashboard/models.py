@@ -10,7 +10,8 @@ class Usuario(models.Model):
     twitter = models.CharField(max_length=30)
     cidade = models.CharField(max_length=30)
     descricao_usuario = models.CharField(max_length=120)
-    pontuacao = models.IntegerField()
+    pontuacao = models.IntegerField(null=True)
+    foto_perfil = models.ImageField(null=True)
     # usuario = models.ManyToManyField(Usuario)
 
 

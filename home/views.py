@@ -24,7 +24,7 @@ def cadastro_page(request):
         form = UsuarioForm(request.POST)
         if form.is_valid():
             user = form.save()
-            return redirect("home/")
+            return redirect("/login")
         else:
             form = UsuarioForm(request.POST)
             return render(request, "home/cadastro.html", {"form": form})
@@ -35,7 +35,7 @@ def cadastro_page(request):
 
 def logout_user(request):
     logout(request)
-    return redirect("home/")
+    return redirect("/")
 
 
 class AutenticacaoView(View):

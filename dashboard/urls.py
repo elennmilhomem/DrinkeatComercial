@@ -6,7 +6,8 @@ from django.conf import settings
 
 urlpatterns = [
     path("", views.FeedView.as_view(), name="dashboard_feed"),
-    path("register/post", views.register_post, name="register_post")
+    path("register/post", views.register_post, name="register_post"),
+    path("register/usuario", views.UsuarioFormView.as_view(), name="register_usuario")
 
 ]
 
