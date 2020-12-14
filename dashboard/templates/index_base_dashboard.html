@@ -149,11 +149,11 @@
                         </span>
                       </p>
                 </div>
-                <a href="{% url 'update_usuario' usuario.id %}" class="btn btn-primary btn-block mb-2" >Editar Perfil</a>
+                <a href="{% url 'update_usuario' usuario.id %}" class="btn btn-primary mb-2 btn-sm" >Editar Perfil</a>
                 <form action="{% url 'deslogar_user' %}" method="post">
                   {% csrf_token %}
                   <!-- <a class="nav-link" type="submit">Sair</a> -->
-                  <input class="btn btn-primary btn-block mb-2" type="submit" value="Sair">
+                  <input class="btn btn-primary mb-2 btn-sm " type="submit" value="Sair">
                 </form>
               </div>
               <div class="col-lg-8">
